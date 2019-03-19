@@ -1,3 +1,5 @@
+#include "Timer.h" 
+
 const int rpin = 3;
 const int ampin = 4;
 const int gpin = 5;
@@ -23,9 +25,6 @@ void loop() {
   digitalWrite(gpin, LOW);
   digitalWrite(ampin, LOW);
   digitalWrite(rpin, HIGH);
-  delay(20000);
-  
-  
-  
+  delay(20000); 
 
 }
