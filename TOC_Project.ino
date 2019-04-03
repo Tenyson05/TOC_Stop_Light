@@ -1,5 +1,3 @@
-//#include "Timer.h" 
-//may have to change pin nums later
 const int rpin = 3;
 const int ampin = 4;
 const int gpin = 5;
@@ -68,16 +66,14 @@ void redButton() {
  }else {
   delay(1000);
  }
-  
-
-    
+      
 }
 
 void greenButton() {
+  delay(1000);
   int buttonState = digitalRead(wButton);
   if(buttonState == HIGH) {
     timer = 10000;
-    delay(1000);
   }
   else {
     delay(1000);
@@ -85,9 +81,3 @@ void greenButton() {
 
   
 }
-
-//void off() {
-//  digitalWrite(gpin, LOW);
-//  digitalWrite(ampin, LOW);
-//  digitalWrite(gpin, LOW);
-//}
