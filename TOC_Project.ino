@@ -4,7 +4,6 @@ const int gpin = 5;
 const int wButton = 10;
 
 int timer = 1000;
-int button;
 
 void setup() {
   // put your setup code here, to run once:
@@ -15,10 +14,6 @@ void setup() {
 }
 
 void loop() {
-//  if(digitalRead(wButton) == HIGH){
-//    timer = 30000;
-//  }
-
   green();
   greenButton();
   amber();
@@ -41,43 +36,36 @@ void amber() {
   digitalWrite(gpin, LOW);
   digitalWrite(ampin, HIGH); 
 }
-
-//The amberButton and red button hanges the delay of the red lights if
-//the buttoms are press if the button is not press the lights go through
-//it's normal light cycle
-
 int amberButton() {
-  delay(1000);
+ // delay(5000);
   int buttonState = digitalRead(wButton);
   if(buttonState == HIGH) {
     timer = 10000;
     
   }
   else {
-    delay(1000);
+    delay(5000);
   }
 }
 
 void redButton() {
  int buttonState = digitalRead(wButton);
- delay(1000);
+ //delay(10000);
  if(buttonState == HIGH ){
   delay(timer);
  }else {
-  delay(1000);
+  delay(10000);
  }
       
 }
 
 void greenButton() {
-  delay(1000);
+ // delay(10000);
   int buttonState = digitalRead(wButton);
   if(buttonState == HIGH) {
     timer = 10000;
   }
   else {
-    delay(1000);
-  }
-
-  
+    delay(15000);
+  }  
 }
